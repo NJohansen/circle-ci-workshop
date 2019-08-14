@@ -1,4 +1,5 @@
 version: 2.0
+jobs:
   test:
     docker:
       - image: circleci/openjdk:8-jdk
@@ -23,7 +24,7 @@ version: 2.0
 
 workflows:
   version: 2
-  two_job_flow:
+  flow:
     jobs:
       - test
       - package:
