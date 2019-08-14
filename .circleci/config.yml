@@ -31,7 +31,7 @@ jobs:
           paths:
             - build/*
       - run:
-          command: cd build/ | ls
+          command: cd build/ && ls
 
 workflows:
   version: 2
