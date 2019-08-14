@@ -32,7 +32,7 @@ jobs:
             - target/application.jar
             - build/*
       - run:
-          command: cd build/ && ls
+          command: cd target/ && ls
 
 workflows:
   version: 2
