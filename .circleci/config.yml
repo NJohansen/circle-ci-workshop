@@ -30,6 +30,8 @@ jobs:
           root: .
           paths:
             - build/*
+      - run:
+          command: pwd
 
 workflows:
   version: 2
