@@ -30,6 +30,8 @@ jobs:
           root: .
           paths:
             - .
+      - run:
+          command: pwd && ls
 
   dockerize:
     machine: true
