@@ -26,13 +26,8 @@ jobs:
       - store_artifacts:
           path: build/libs
           destination: prefix
-      - persist_to_workspace:
-          root: .
-          paths:
-            - target/application.jar
-            - build/*
       - run:
-          command: cd target/ && ls
+          command: cd build/libs/ && ls
 
 workflows:
   version: 2
