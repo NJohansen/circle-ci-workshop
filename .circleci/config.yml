@@ -24,7 +24,7 @@ jobs:
           path: build/libs
           destination: prefix
       - persist_to_workspace:
-          root: test
+          root: /tmp/workspace
           paths:
             - .
 
