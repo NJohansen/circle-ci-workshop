@@ -25,17 +25,16 @@ jobs:
           command: gradle jar
       - store_artifacts:
           path: build/libs
+          destination: prefix
       - persist_to_workspace:
           root: .
           paths:
             - .
-      - run:
-          command: pwd && ls
-
   dockerize:
     machine: true
     steps:
-      - checkout
+      - attach_workspace:
+          at: .
       # Login to docker
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
 
