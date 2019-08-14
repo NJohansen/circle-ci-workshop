@@ -13,7 +13,7 @@ jobs:
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
-            - .
+            - 1
   package:
     docker:
       - image: circleci/openjdk:8-jdk
