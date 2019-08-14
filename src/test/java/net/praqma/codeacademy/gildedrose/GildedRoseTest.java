@@ -19,7 +19,7 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertTrue("brie is a higher quality",app.items[0].quality>1 );
-        
+
     }
     @Test
     public void never_over_50() {
@@ -27,6 +27,13 @@ public class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertTrue("brie is higher quality than it should be able to",app.items[0].quality==50 );
-        
+
+    }
+    @Test
+    public void never_negative(){
+      Item[] items = new Item[] { new Item("Negative item", 0, -1) };
+      GildedRose app = new GildedRose(items);
+      app.updateQuality();
+      assertTrue("The item has a negative quality", app.items[0].quality < 0);
     }
 }
